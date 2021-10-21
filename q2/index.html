@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=no,shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../water.css" />
+    <link rel="stylesheet" href="/q2/css/slippry.css" />
+    <title>Responsive Slider</title>
+    <style>
+      .nav {
+        background: #eee;
+        height: 75px;
+        width: 100% auto;
+      }
+      h1 {
+        padding-top: 10px;
+        font-weight: bolder;
+      }
+      #slider {
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <h1 align="center"><b>Responsive Slider</b></h1>
+      </nav>
+    </header>
+    <main>
+      <!-- slider -->
+      <ul id="slider">
+        <li>
+          <a href="#slide1"
+            ><img
+              src="https://source.unsplash.com/random/1400x600"
+              alt="Welcome to Slippry!"
+          /></a>
+        </li>
+        <li>
+          <a href="#slide2"
+            ><img
+              src="https://source.unsplash.com/daily"
+              alt="This is an awesome jQuery slider plugin."
+          /></a>
+        </li>
+        <li>
+          <a href="#slide3"
+            ><img
+              src="https://source.unsplash.com/weekly"
+              alt="Check it out, you are going to <span class='red'>♥</span> it :)"
+          /></a>
+        </li>
+      </ul>
+
+      <!-- end -->
+    </main>
+    <footer>
+      <p align="center">&copy; Kanak Tripathi</p>
+    </footer>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script src="/q2/slippry.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#slider").slippry({
+          adaptiveHeight: true,
+          caption: false,
+          controls: false,
+          transition: "horizontal", // fade, horizontal, kenburns, false
+          speed: 800,
+          loop: true,
+        });
+      });
+    </script>
+  </body>
+</html>
